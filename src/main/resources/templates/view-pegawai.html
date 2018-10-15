@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Pegawai</title>
+</head>
+<body>
+<h3 th:text="'Lihat Data Pegawai - ' + ${pegawai.nip}"></h3>
+<table>
+    <tr>
+        <td>NIP</td>
+        <td th:text="${pegawai.nip}"></td>
+    </tr>
+    <tr>
+        <td>Nama</td>
+        <td th:text="${pegawai.nama}"></td>
+    </tr>
+    <tr>
+        <td>Tempat Lahir</td>
+        <td th:text="${pegawai.tempatLahir}"></td>
+    </tr>
+    <tr>
+        <td>Tanggal Lahir</td>
+        <td th:text="${pegawai.tanggalLahir}"></td>
+    </tr>
+    <tr>
+        <td>Tahun Masuk</td>
+        <td th:text="${pegawai.tahunMasuk}"></td>
+    </tr>
+    <tr>
+        <td>Nama Instansi</td>
+        <td th:text="${pegawai.instansi.nama}"></td>
+    </tr>
+    <tr>
+        <td>Jabatan</td>
+        <td>
+            <ul th:each="jabatan : ${jabatan}">
+               <li th:text="${jabatan.nama}"></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Gaji</td>
+        <td th:text="${gaji}"></td>
+    </tr>
+
+</table>
+</body>
+</html>
